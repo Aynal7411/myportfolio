@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Testimonials</h1>
+<div class="testimonials-container">
+    {% for testimonial in testimonials %}
+    <div class="testimonial-card">
+        <div class="testimonial-header">
+            {% if testimonial.image %}
+            <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}" class="testimonial-image">
+            {% endif %}
+            <div class="testimonial-info">
+                <h2>{{ testimonial.name }}</h2>
+                {% if testimonial.role %}
+                <p class="role">{{ testimonial.role }}</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="testimonial-body">
+            <p>{{ testimonial.feedback }}</p>
+        </div>
+        <div class="testimonial-footer">
+            <small>Posted on: {{ testimonial.created_at|date:"F d, Y" }}</small>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

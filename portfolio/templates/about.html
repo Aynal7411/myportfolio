@@ -1,0 +1,43 @@
+<!-- portfolio/templates/about.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="about-background">
+    <div class="about-container">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <div class="about-image">
+                <img  src="{% static 'images/aynal.jpg' %}" alt="Aynal Haque">
+            </div>
+            <div class="about-text">
+                <h2><strong>Hi, I am  Aynal Haque</strong></h2>
+                <p>
+                    I'm a full-stack web developer with expertise in Python, Django, Node.js, React, and more.
+                    I have a passion for building scalable, user-friendly web applications that solve real-world problems.
+                </p>
+                <p>
+                    With 2 years of experience in the industry, I've worked on a variety of projects, from small
+                    business websites to large-scale enterprise applications. I'm always eager to learn new technologies
+                    and improve my skills.
+                </p>
+                <h3>Skills</h3>
+                <ul class="skills-list">
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>Node.js</li>
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>HTML/CSS</li>
+                    <li>SQL/POSTGRESQL/MYSQL/MONGODB</li>
+                    <li>Git</li>
+                </ul>
+                <h3>Education</h3>
+                <p>
+                    B.Sc and M.Sc  in Chemistry from National University in Bangladesh.
+                </p>
+                <h1><i><b>I am self taught Web Developer</b></i></h1>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

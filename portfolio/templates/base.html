@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="background-image">
+        <header>
+            <nav>
+                <!-- Toggle Button for Mobile -->
+                <div class="navbar-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <!-- Navigation Links -->
+                <ul class="navbar-menu">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li> 
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navbarMenu = document.querySelector('.navbar-menu');
+    
+            if (mobileMenu && navbarMenu) {
+                mobileMenu.addEventListener('click', () => {
+                    navbarMenu.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                });
+            } else {
+                console.error('Mobile menu or navbar menu not found!');
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>
