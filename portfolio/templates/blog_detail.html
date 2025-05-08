@@ -1,0 +1,13 @@
+<!-- filepath: /workspaces/myportfolio/portfolio/templates/blog_detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 bg-white p-5 ">
+    <h1 class="text-center">{{ post.title }}</h1>
+    <p class="text-muted text-center">By {{ post.author }} | {{ post.created_at|date:"F j, Y" }}</p>
+    <hr>
+    <div class="content">
+        {{ post.content|safe }}
+    </div>
+</div>
+{% endblock %}
