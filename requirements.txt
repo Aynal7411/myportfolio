@@ -120,7 +120,9 @@ sympy==1.13.3
 terminado==0.18.1
 threadpoolctl==3.6.0
 tinycss2==1.4.0
-torch==2.7.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0+cpu
+
 torchaudio==2.7.0+cpu
 torchvision==0.22.0+cpu
 tornado==6.4.2
